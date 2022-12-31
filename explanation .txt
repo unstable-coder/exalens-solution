@@ -1,0 +1,18 @@
+This code appears to be a function that helps someone find an apartment block that meets a set of requirements. It takes in two arguments:
+
+blocks: an array of objects, where each object represents an apartment block and has keys for various amenities (e.g., gym, pool, etc.)
+reqs: an array of strings, where each string represents a required amenity
+The function first initializes two variables: minDistance, which will keep track of the minimum distance from an apartment block to the nearest
+block with a required amenity, and optimalBlock, which will keep track of the apartment block with the minimum distance.
+
+Then, the function loops through each block in the blocks array. For each block, it calculates the maximum distance to the nearest
+block with a required amenity by looping through the reqs array and using the findDistance function to calculate the distance to the 
+nearest block with the current required amenity. It updates the maxDistance variable if the current distance is larger.
+
+Finally, the function checks whether the current block's maxDistance is smaller than the current minDistance. If it is, the function 
+updates minDistance to the current block's maxDistance and optimalBlock to the current block's index.
+
+The findDistance function calculates the distance to the nearest block with a given amenity by looping through the blocks to the right 
+and left of the current block and returning the smallest distance to a block with the amenity. If it finds a block with the amenity, it breaks out of the loop.
+
+Overall, the apartmentHunting function finds the apartment block that is closest to the nearest block with each required amenity.
